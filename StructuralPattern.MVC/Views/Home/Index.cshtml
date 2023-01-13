@@ -8,15 +8,19 @@
 </div>
 
 <div class="container">
-    <form>
+    <form method="POST" action="/Message/Send">
         <div class="mb-3">
             <label for="email-recipients" class="form-label">Send to (1 or more comma separated email recipients)</label>
-            <input type="text" class="form-control" id="email-recipients" aria-describedby="emailHelp" required="required">
+            <input type="text" name="Recipients" class="form-control" id="email-recipients" aria-describedby="emailHelp" required="required">
             <div id="emailHelp" class="form-text">Please enter the message recipients.</div>
+        </div>
+        <div class="mb-3">
+            <label for="message-title" class="form-label">Message Title</label>
+            <input type="text" name="Title" class="form-control" id="message-title" aria-describedby="message-title" required="required">
         </div>
         <div class="form-group">
             <label for="main-text">Message body</label>
-            <textarea class="form-control" id="main-text" rows="3" required="required"></textarea>
+            <textarea class="form-control" name="Body" id="main-text" rows="3" required="required"></textarea>
         </div>
         <div class="d-flex justify-content-center">
             <div class="img-select m-3 default-border" style="width: 200px; height: 200px" id="style-1"></div>
@@ -27,9 +31,9 @@
         </div>
         <div class="mb-3">
             <label for="senders" class="form-label">Message senders (1 or more comma separated)</label>
-            <input type="text" class="form-control" id="senders" aria-describedby="senderHelp" required="required">
+            <input type="text" name="Senders" class="form-control" id="senders" aria-describedby="senderHelp" required="required">
             <div id="senderHelp" class="form-text">Please enter the message senders.</div>
         </div>
-        <button type="submit" class="btn btn-primary image-select">Submit</button>
+        <button type="submit" class="btn btn-success image-select">Send</button>
     </form>
 </div>
