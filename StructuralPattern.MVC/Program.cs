@@ -1,7 +1,14 @@
+using StructuralPattern.Services;
+using StructuralPattern.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//register all services
+builder.Services.AddScoped<IEmailClient, EmailClient>();
+builder.Services.AddScoped<IMessageService, MessageService>();
 
 var app = builder.Build();
 

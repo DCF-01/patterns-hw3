@@ -1,6 +1,7 @@
 ﻿let currentSelectedElement = null;
 let mainTextArea = document.querySelector('#main-text');
 let imgSelectElements = document.querySelectorAll('.img-select');
+let styleInput = document.querySelector('#style-input');
 
 imgSelectElements.forEach(el => {
     el.addEventListener('click', (e) => {
@@ -12,5 +13,9 @@ imgSelectElements.forEach(el => {
         
         currentSelectedElement = el;
         currentSelectedElement.classList.add('selected-border');
+        
+        let background = "{ background-color: " + getComputedStyle(currentSelectedElement).backgroundColor + "; " + "background-image: " + getComputedStyle(currentSelectedElement).backgroundImage + "; }"
+        console.log(background);
+        styleInput.value = background;
     })
 })

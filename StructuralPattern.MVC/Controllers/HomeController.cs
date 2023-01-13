@@ -13,9 +13,9 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index([FromQuery] ResultViewModel resultViewModel)
     {
-        return View();
+        return View(new ResultViewModel{ Message = resultViewModel.Message, PathToMessage = resultViewModel.PathToMessage});
     }
 
     public IActionResult Privacy()

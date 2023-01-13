@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralPattern.MVC", "StructuralPattern.MVC\StructuralPattern.MVC.csproj", "{2676967D-6679-42CD-A3FF-ACFAA1D2C846}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralPattern.Services", "StructuralPattern.Services\StructuralPattern.Services.csproj", "{6007F760-DAA1-4969-822B-256CC85DB1DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{2676967D-6679-42CD-A3FF-ACFAA1D2C846}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2676967D-6679-42CD-A3FF-ACFAA1D2C846}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2676967D-6679-42CD-A3FF-ACFAA1D2C846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6007F760-DAA1-4969-822B-256CC85DB1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6007F760-DAA1-4969-822B-256CC85DB1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6007F760-DAA1-4969-822B-256CC85DB1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6007F760-DAA1-4969-822B-256CC85DB1DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
