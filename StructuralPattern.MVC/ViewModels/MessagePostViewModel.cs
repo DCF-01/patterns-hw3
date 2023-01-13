@@ -9,11 +9,11 @@ public class MessagePostViewModel
     public string Body { get; set; }
     public string Senders { get; set; }
     private string _style;
-    public string Style { get; set; }
-    /*{
+    public string Style
+    {
         get => _style;
-        set => _style = value.Replace("url(\"", "url(").Replace("\")", ")");
-    }*/
+        set => _style = "{ " + value + " }";
+    }
 
     public Message ToMessageModel => new Message(Recipients, Title, Body, Senders, Style);
 }

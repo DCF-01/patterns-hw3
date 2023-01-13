@@ -19,7 +19,7 @@ public class MessageCommand : ICommand
 
     public void Execute()
     {
-        string htmlDoc = string.Format(HtmlTemplate.Html, _message.Title, _message.Body, _message.Style);
+        string htmlDoc = string.Format(HtmlTemplate.Html, _message.Title, _message.Body, string.Join(", ", _message.Senders), _message.Style);
 
         foreach (var recipient in _message.Recipients)
         {
@@ -39,7 +39,7 @@ public class MessageCommand : ICommand
     {
         var path = Directory.GetCurrentDirectory() + "\\wwwroot\\html\\message.html";
         Console.WriteLine($"writing to {path}");
-        using var sw = new StreamWriter(path, Encoding.UTF8, new FileStreamOptions{Access = FileAccess.ReadWrite, Mode = FileMode.OpenOrCreate});
+        using var sw = new StreamWriter(path, false);
 
         sw.WriteLine(htmlString);
     }
