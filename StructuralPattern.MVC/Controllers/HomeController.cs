@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using StructuralPattern.MVC.Models;
 
-namespace StructuralPattern.MVC.Controllers;
+namespace StructuralPattern.MVC.Controllers
+{
+
 
 public class HomeController : Controller
 {
@@ -17,15 +19,5 @@ public class HomeController : Controller
     {
         return View(new ResultViewModel{ Message = resultViewModel.Message, PathToMessage = resultViewModel.PathToMessage});
     }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
+}
 }
