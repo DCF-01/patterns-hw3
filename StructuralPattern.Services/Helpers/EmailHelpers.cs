@@ -4,7 +4,7 @@ namespace StructuralPattern.Services.Helpers;
 
 public static class EmailHelpers
 {
-    public static bool ValidateEmailAddresses(string email)
+    public static bool ValidateEmailAddress(string email)
     {
         try
         {

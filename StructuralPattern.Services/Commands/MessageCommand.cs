@@ -23,7 +23,7 @@ public class MessageCommand : ICommand
 
         foreach (var recipient in _message.Recipients)
         {
-            if (!EmailHelpers.ValidateEmailAddresses(recipient))
+            if (!EmailHelpers.ValidateEmailAddress(recipient))
             {
                 Console.WriteLine($"Recipient address {recipient} was invalid, skipping.");
                 continue;

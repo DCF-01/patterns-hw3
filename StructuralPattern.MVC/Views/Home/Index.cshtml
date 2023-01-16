@@ -11,7 +11,7 @@
 <div class="container">
     <form method="POST" action="/Message/Send">
         <div class="mb-3">
-            <label for="email-recipients" class="form-label">Send to (1 or more comma separated email recipients)</label>
+            <label for="email-recipients" class="form-label">Send to (1 or more comma separated email <b>recipients</b>)</label>
             <input type="text" name="Recipients" class="form-control" id="email-recipients" aria-describedby="emailHelp" required="required">
             <div id="emailHelp" class="form-text">Please enter the message recipients.</div>
         </div>
@@ -37,7 +37,15 @@
             <div id="senderHelp" class="form-text">Please enter the message senders.</div>
         </div>
         <button type="submit" class="btn btn-primary image-select">Send</button>
-        <a href="~/@Model.PathToMessage" class="btn btn-success">View created message</a>
-        <p>@Model.Message</p>
+        @if (!string.IsNullOrWhiteSpace(@Model.PathToMessage))
+        {
+            <a href="~/@Model.PathToMessage" class="btn btn-success">View created message</a>
+            <p>@Model.Message</p>
+        }
+        else
+        {
+            <a href="#" class="btn btn-warning">No message available</a>
+            <p>@Model.Message</p>
+        }
     </form>
 </div>

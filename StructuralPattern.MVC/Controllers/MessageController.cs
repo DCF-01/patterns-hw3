@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using StructuralPattern.MVC.Models;
 using StructuralPattern.MVC.ViewModels;
 using StructuralPattern.Services.Commands;
 using StructuralPattern.Services.Interfaces;

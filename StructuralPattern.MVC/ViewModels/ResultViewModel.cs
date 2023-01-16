@@ -1,4 +1,4 @@
-namespace StructuralPattern.MVC.Models;
+namespace StructuralPattern.MVC.ViewModels;
 
 public class ResultViewModel
 {

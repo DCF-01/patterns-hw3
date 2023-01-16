@@ -1,6 +1,5 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using StructuralPattern.MVC.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using StructuralPattern.MVC.ViewModels;
 
 namespace StructuralPattern.MVC.Controllers
 {
